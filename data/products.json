@@ -1,0 +1,23 @@
+
+{
+  "products": [
+    {
+      "id": "audio-technica-at-lp70x-bz",
+      "name": "Audio-Technica AT-LP70X-BZ",
+      "targetPrice": 300,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Bay Bloor Radio",
+          "url": "https://baybloorradio.com/audio-technica-at-lp70x-automatic-belt-drive-turntable-with-atvm95c-cartridge/",
+          "enabled": true
+        },
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/audio-technica-at-lp70x-fully-automatic-belt-drive-turntable-available-as-in-store-pickup-only-copy",
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}
