@@ -1,0 +1,33 @@
+
+name: Daily Price Tracker
+
+on:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+jobs:
+  track-prices:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run price tracker
+        run: npx playwright test tests/turntable-price.spec.ts --project=webkit
+        env:
+          GOOGLE_SHEETS_WEB_APP_URL: ${{ secrets.GOOGLE_SHEETS_WEB_APP_URL }}
+          PRICE_TRACKER_SECRET: ${{ secrets.PRICE_TRACKER_SECRET }}
