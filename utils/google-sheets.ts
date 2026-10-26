@@ -13,8 +13,17 @@ export interface GoogleSheetPriceEntry {
   targetMet: boolean;
 }
 
+export type ProductCategory = 'turntable' | 'speaker' | 'record';
+
+const SHEET_NAMES: Record<ProductCategory, string> = {
+  turntable: 'Turntable Price History',
+  speaker: 'Speaker Price History',
+  record: 'Record Price History',
+};
+
 export async function savePriceToGoogleSheets(
-  entry: GoogleSheetPriceEntry
+  entry: GoogleSheetPriceEntry,
+  category: ProductCategory = 'turntable'
 ): Promise<void> {
   const url = process.env.GOOGLE_SHEETS_WEB_APP_URL;
 
@@ -32,6 +41,8 @@ export async function savePriceToGoogleSheets(
     );
   }
 
+  const sheetName = SHEET_NAMES[category];
+
   const response = await fetch(url, {
     method: 'POST',
     headers: {
@@ -39,6 +50,7 @@ export async function savePriceToGoogleSheets(
     },
     body: JSON.stringify({
       ...entry,
+      sheetName,
       secret,
     }),
     redirect: 'follow',
@@ -46,30 +58,23 @@ export async function savePriceToGoogleSheets(
 
   const responseText = await response.text();
 
-console.log('Google Sheets HTTP status:', response.status);
-console.log('Google Sheets response URL:', response.url);
-console.log('Google Sheets response preview:', responseText.slice(0, 300));
-
-let result: { success?: boolean; message?: string };
-
-try {
-  result = JSON.parse(responseText);
-} catch {
-  throw new Error(
-    `Google Sheets returned non-JSON content. HTTP ${response.status}. ` +
-    `Response preview: ${responseText.slice(0, 200)}`
+  console.log('Google Sheets HTTP status:', response.status);
+  console.log('Google Sheets response URL:', response.url);
+  console.log(
+    'Google Sheets response preview:',
+    responseText.slice(0, 300)
   );
-}
 
-if (!response.ok || result.success !== true) {
-  throw new Error(
-    `Google Sheets save failed: ${
-      result.message ?? response.statusText
-    }`
-  );
-}
+  let result: { success?: boolean; message?: string };
 
-console.log('Price saved to Google Sheets.');
+  try {
+    result = JSON.parse(responseText);
+  } catch {
+    throw new Error(
+      `Google Sheets returned non-JSON content. HTTP ${response.status}. ` +
+      `Response preview: ${responseText.slice(0, 200)}`
+    );
+  }
 
   if (!response.ok || result.success !== true) {
     throw new Error(
@@ -79,5 +84,5 @@ console.log('Price saved to Google Sheets.');
     );
   }
 
-  console.log('Price saved to Google Sheets.');
+  console.log(`Price saved to Google Sheets tab: ${sheetName}`);
 }
