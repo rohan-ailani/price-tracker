@@ -23,6 +23,29 @@
           "enabled": true
         }
       ]
-    }
+    },
+{
+  "id": "sonos-era-100-black",
+  "name": "Sonos Era 100 Wireless Speaker - Black",
+  "targetPrice": 250,
+  "currency": "CAD",
+  "retailers": [
+    {
+      "name": "Visions Electronics",
+      "url": "https://www.visions.ca/sonos-era-100-speaker-black",
+      "enabled": true
+    },
+    {
+      "name": "CANEX",
+      "url": "https://www.canex.ca/en/sonos-era-100-speaker-black-840136805830",
+      "enabled": true
+    },
+  {
+      "name": "Bay Bloor Radio",
+      "url": "https://baybloorradio.com/sonos-era-100/?srsltid=AYCX9vJBkfm0misP7urHAqpkx78mH6DfLyrl_Uz5O2ABjhgWcRRpuGxK",
+      "enabled": true
+  }
+  ]
+}
   ]
 }
