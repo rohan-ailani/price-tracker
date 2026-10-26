@@ -16,6 +16,11 @@
           "name": "Sonic Boom Music",
           "url": "https://www.sonicboommusic.com/products/audio-technica-at-lp70x-fully-automatic-belt-drive-turntable-available-as-in-store-pickup-only-copy",
           "enabled": true
+        },
+        {
+          "name": "Long & McQuade",
+          "url": "https://www.long-mcquade.com/392656/Pro-Audio-Recording/DJ/Audio-Technica/AT-LP70X-Fully-Automatic-Belt-Drive-Turntable-Black-Bronze.htm?srsltid=AYCX9vINgptqRGat9fj9mAkYTq-Nes1k3dRSKs8cSGk1NZJFl7IWN8-l",
+          "enabled": true
         }
       ]
     }
