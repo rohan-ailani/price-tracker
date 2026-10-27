@@ -1,0 +1,498 @@
+{
+  "products": [
+    {
+      "id": "adele-25",
+      "name": "Adele - 25",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/adele-25-vinyl",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "adele-30",
+      "name": "Adele - 30",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Essency Records",
+          "url": "https://essencyrecords.com/products/adele-30-180g-black-2lp",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "alanis-morissette-jagged-little-pill",
+      "name": "Alanis Morissette - Jagged Little Pill",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/alanis-morissette-jagged-little-pill-limited-edition-clear-vinyl-new-vinyl?_pos=2&_psq=alanis&_psid=ff20448bf&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "andrea-bocelli-a-family-christmas",
+      "name": "Andrea Bocelli - A Family Christmas",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/andrea_bocelli_a_family_christmas_new_vinyl?variant=44833269317863",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "bob-marley-legend",
+      "name": "Bob Marley & The Wailers - Legend",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/bob-marley-the-wailers-legend-vinyl?_pos=2&_psq=legend&_psid=6b26a7145&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "buena-vista-social-club",
+      "name": "Buena Vista Social Club - Buena Vista Social Club",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/buena-vista-social-club-buena-vista-social-club-25th-anniversary-edition-2lp-new-vinyl?_pos=1&_psq=buena+v&_psid=6990fb342&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "celine-dion-my-love",
+      "name": "Celine Dion - My Love",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "London Drugs",
+          "url": "https://www.sonicboommusic.com/products/celine-dion-my-love-essential-collection-pearly-white-vinyl-new-vinyl?variant=52359293436135&_pos=1&_sid=6a431ec74&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "coldplay-a-head-full-of-dreams",
+      "name": "Coldplay - A Head Full of Dreams",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/coldplay-a-head-full-of-dreams-recycled-black-vinyl-new-vinyl?variant=50485989507303&_pos=8&_sid=bcbef3c69&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "coldplay-moon-music",
+      "name": "Coldplay - Moon Music",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Warner Music Canada",
+          "url": "https://wmc.shop/products/moon-music-ecorecord-clear",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "coldplay-viva-la-vida",
+      "name": "Coldplay - Viva la Vida or Death and All His Friends",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Resolute Records",
+          "url": "https://resoluterecords.ca/products/coldplay-viva-la-vida-or-death-and-all-his-friends-new-vinyl",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "daft-punk-random-access-memories",
+      "name": "Daft Punk - Random Access Memories",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/daft-punk-random-access-memories?_pos=2&_psq=daft+punk&_psid=0ad237a09&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "disney-beauty-and-the-beast",
+      "name": "Disney - Beauty and the Beast",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/soundtrack-disney-beauty-and-the-beast-original-broadway-cast-recording-new-vinyl?variant=52584794783975&_pos=6&_sid=165451ac7&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "drake-if-youre-reading-this-its-too-late",
+      "name": "Drake - If You're Reading This It's Too Late",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/drake-if-youre-reading-this-its-too-late-vinyl?variant=12488680276015&_pos=4&_sid=4066e47fb&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "drake-take-care",
+      "name": "Drake - Take Care",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/drake-take-care-vinyl?variant=30279233470511&_pos=5&_sid=4066e47fb&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "drake-views",
+      "name": "Drake - Views",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/drake-views-vinyl?variant=12351155470383&_pos=2&_sid=4066e47fb&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "florence-and-the-machine-symphony-of-lungs",
+      "name": "Florence + The Machine - Symphony of Lungs",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/florence-the-machine-symphony-of-lungs-bbc-proms-at-the-royal-albert-hall-2lp-new-vinyl?variant=50688216137959&_pos=1&_sid=3d7d31b46&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "frank-sinatra-ultimate-sinatra",
+      "name": "Frank Sinatra - Ultimate Sinatra",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/frank-sinatra-ultimate-sinatra-vinyl?srsltid=AYCX9vKohiFalZZL6LSUlQZThG9VDYVu_s5_Zy0pDldvC9xyeKmIHsEc",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "jay-z-the-blueprint-three",
+      "name": "JAY-Z - The Blueprint 3",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/jay-z-the-blueprint-3-2lp-white-vinyl-new-vinyl?variant=52720887300327&_pos=2&_sid=5b25a47ee&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "jeff-buckley-grace",
+      "name": "Jeff Buckley - Grace",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/jeff_buckley_grace_gold_vinyl?_pos=5&_psq=jeff+byc&_psid=a14461994&_ss=eL",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "justin-bieber-justice",
+      "name": "Justin Bieber - Justice",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/justin-bieber-justice-new-vinyl?variant=40033668989108&_pos=2&_sid=2c9c4a2ea&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "kendrick-lamar-good-kid-maad-city",
+      "name": "Kendrick Lamar - good kid, m.A.A.d city",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/kendrick_lamar_good_kid_m-a-a-d_city_2lp_black_vinyl_new_vinyl?_pos=1&_psq=good+kid+m&_psid=a667f4dad&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "lauryn-hill-miseducation",
+      "name": "Lauryn Hill - The Miseducation of Lauryn Hill",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/lauryn-hill-the-miseducation-of-lauryn-hill-vinyl?_pos=1&_psq=laury&_psid=94f3ceb40&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "marvin-gaye-whats-going-on",
+      "name": "Marvin Gaye - What's Going On",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/marvin-gaye-whats-going-on-vinyl?_pos=1&_psq=marvin&_psid=3f78b7b88&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "mumford-and-sons-babel",
+      "name": "Mumford & Sons - Babel",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/mumford-sons-babel-vinyl?_pos=1&_psq=mumfo&_psid=1f455b619&_ss=e",
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "id": "noah-kahan-live-from-fenway-park",
+      "name": "Noah Kahan - Live From Fenway Park",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/noah-kahan-live-from-fenway-park-new-vinyl?variant=50731623809255&_pos=6&_sid=7410506cc&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "noah-kahan-the-great-divide",
+      "name": "Noah Kahan - The Great Divide",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/noah-kahan-the-great-divide-2lp-indie-exclusive-new-vinyl?variant=51835788689639&_pos=1&_sid=7410506cc&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "post-malone-stoney",
+      "name": "Post Malone - Stoney",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/post-malone-stoney-vinyl?variant=12322455093295&_pos=8&_sid=3ded403b7&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "stan-getz-joao-gilberto-getz-gilberto",
+      "name": "Stan Getz & João Gilberto - Getz/Gilberto",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/stan-getz-joao-gilberto-getz-gilberto-new-vinyl?_pos=1&_psq=stan+getz%2Fjo&_psid=bfc76e27e&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "taylor-swift-evermore",
+      "name": "Taylor Swift - evermore",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/taylor_swift__evermore_new_vinyl?variant=39684647092404&_pos=5&_sid=ebcd4140f&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "taylor-swift-folklore",
+      "name": "Taylor Swift - folklore",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/taylor-swift-folklore-in-the-trees-edition-brown-vinyl-2lp-new-vinyl?variant=39308691800244&_pos=3&_sid=ebcd4140f&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "taylor-swift-midnights",
+      "name": "Taylor Swift - Midnights",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/taylor-swift-midnights-jade-green-marbled-edition-new-vinyl?variant=45563741339879&_pos=13&_sid=ebcd4140f&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "taylor-swift-red-taylors-version",
+      "name": "Taylor Swift - Red (Taylor's Version)",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/taylor-swift-red-taylors-version-4lp-new-vinyl?variant=42068873248999&_pos=7&_sid=ebcd4140f&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "the-1975-being-funny-in-a-foreign-language",
+      "name": "The 1975 - Being Funny in a Foreign Language",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/the-1975-being-funny-in-a-foreign-language-2026-repress-clear-vinyl-new-vinyl?_pos=1&_psq=being+fu&_psid=88a6aa384&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "the-1975-i-like-it-when-you-sleep",
+      "name": "The 1975 - I Like It When You Sleep, for You Are So Beautiful Yet So Unaware of It",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/the-1975-i-like-it-when-you-sleep-for-you-are-so-beautiful-yet-so-unaware-of-it-10th-anniversary-edition-coloured-vinyl-new-vinyl?variant=51736389648615&_pos=3&_sid=45103d2ad&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "the-beatles-abbey-road",
+      "name": "The Beatles - Abbey Road",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "UMUSIC Shop Canada",
+          "url": "https://www.umusic.ca/products/abbey-road-lp",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "the-killers-hot-fuss",
+      "name": "The Killers - Hot Fuss",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/the-killers-hot-fuss-vinyl?_pos=3&_psq=hot+fuss&_psid=434574ead&_ss=e",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "various-the-sound-of-music",
+      "name": "Various - The Sound of Music",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/various-artists-the-sound-of-music-3-lp-deluxe-edition-new-vinyl?variant=48255714459879&_pos=17&_sid=165451ac7&_ss=r",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "various-wicked-15th-anniversary-special-edition",
+      "name": "Various - Wicked (15th Anniversary Special Edition)",
+      "targetPrice": 45,
+      "currency": "CAD",
+      "retailers": [
+        {
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/various-wicked-15th-anniversary-special-edition-new-vinyl?variant=50306922938599&_pos=5&_sid=4d7c22ed4&_ss=r&_su_rec=GlQWax8ll3JSn-RscX8_F6Glyon0S_lS1-vwKYpLo-a6vb-MaT-rYUkSP_fk-V9um5-MIXjeSW_4Zt7YJ0nIR9LSL8JmDHttMOsPp6NK9d2y6T2PRIgkE3NvXTeyUktkZvwBI8Rgh_dpFsnVNu3xu2JmQ4jihjgOJIIb_rEBPSYbhXwnHmp411BF7au5w3l-VIv61OOCo9INjGHeyNEPUgstjbgtYjsAdaHlF59lLjMxEWFXLaUaL6wrxoILNrM2XiEITAj5oS10OuyudEd11qssOBbKsQD3OIzBKRVDAMkly7zW7fLcI98FXhbbPVXwKzGO0ySWb4ESTTCJs4nXOOln&_su_rec_id=0f682f27-7a3d-4f88-81c2-778187734bf3-1793133597",
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

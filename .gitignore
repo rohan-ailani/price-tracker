@@ -6,6 +6,7 @@ playwright-report/
 test-results/
 data/*
 !data/products.json
+!data/records.json
 
 # Playwright
 /playwright-report/
