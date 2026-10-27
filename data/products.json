@@ -31,8 +31,8 @@
   "currency": "CAD",
   "retailers": [
     {
-      "name": "Visions Electronics",
-      "url": "https://www.visions.ca/sonos-era-100-speaker-black",
+      "name": "2001 Audio Video",
+      "url": "https://www.2001audiovideo.com/products/view/sonos-next-gen-acoustics-and-connectivity-stereo-speaker-with-voice-enabled-wifi-and-bluetooth-in-bl?gad_source=1&gad_campaignid=23354250628&gbraid=0AAAAADpRukPvPbAojzDbH4_IP73SqXw6Q&gclid=CjwKCAjw9PvWBhAxEiwAddzYyb7e247lDwUzfYQzPO14ua1oJxAlbbkQ8yVgPPLmIlKAkkeh3q9D8hoCguYQAvD_BwE",
       "enabled": true
     },
     {
