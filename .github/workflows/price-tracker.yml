@@ -3,8 +3,10 @@ name: Daily Price Tracker
 
 on:
   schedule:
-    - cron: '15 14 * * *'
-    - cron: '45 21 * * *'
+    - cron: '55 09 * * *'
+      timezone: 'America/Toronto'
+    - cron: '55 17 * * *'
+      timezone: 'America/Toronto'
   workflow_dispatch:
   # push:
   #   branches:
