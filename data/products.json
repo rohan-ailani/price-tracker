@@ -44,6 +44,11 @@
       "name": "Bay Bloor Radio",
       "url": "https://baybloorradio.com/sonos-era-100/?srsltid=AYCX9vJBkfm0misP7urHAqpkx78mH6DfLyrl_Uz5O2ABjhgWcRRpuGxK",
       "enabled": true
+  },
+  {
+      "name": "Visions Electronics",
+      "url": "https://www.visions.ca/sonos-era-100-speaker-black",
+      "enabled": false
   }
   ]
 }
