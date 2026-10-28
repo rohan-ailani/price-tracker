@@ -33,6 +33,18 @@ jobs:
 
       - name: Run price tracker
         run: npx playwright test --project=webkit --reporter=line
+
+      - name: Upload Playwright test results
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: playwright-test-results
+          path: |
+            test-results/
+            playwright-report/
+          if-no-files-found: ignore
+          retention-days: 7
+  
         env:
           GOOGLE_SHEETS_WEB_APP_URL: ${{ secrets.GOOGLE_SHEETS_WEB_APP_URL }}
           PRICE_TRACKER_SECRET: ${{ secrets.PRICE_TRACKER_SECRET }}
