@@ -32,6 +32,9 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run price tracker
+        env:
+          GOOGLE_SHEETS_WEB_APP_URL: ${{ secrets.GOOGLE_SHEETS_WEB_APP_URL }}
+          PRICE_TRACKER_SECRET: ${{ secrets.PRICE_TRACKER_SECRET }}
         run: npx playwright test --project=webkit --reporter=line
 
       - name: Upload Playwright test results
@@ -44,7 +47,3 @@ jobs:
             playwright-report/
           if-no-files-found: ignore
           retention-days: 7
-  
-        env:
-          GOOGLE_SHEETS_WEB_APP_URL: ${{ secrets.GOOGLE_SHEETS_WEB_APP_URL }}
-          PRICE_TRACKER_SECRET: ${{ secrets.PRICE_TRACKER_SECRET }}
