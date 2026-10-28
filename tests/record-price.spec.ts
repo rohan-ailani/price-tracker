@@ -11,13 +11,23 @@ async function ensureCadCurrency(page: Page) {
   const currentCurrency = (await currencyCode.textContent())?.trim();
 
   if (currentCurrency !== 'CAD') {
-    await page
-      .locator('button[aria-controls="dropdown-localization-results"]')
-      .click();
+    const dropdownButton = page.locator(
+      'button[aria-controls="dropdown-localization-results"]',
+    );
 
-    await page
-      .locator('#dropdown-localization-results [data-value="CA"]')
-      .click();
+    const isExpanded =
+      (await dropdownButton.getAttribute('aria-expanded')) === 'true';
+
+    if (!isExpanded) {
+      await dropdownButton.click();
+    }
+
+    const canadaOption = page.locator(
+      '#dropdown-country-results [data-value="CA"]',
+    );
+
+    await expect(canadaOption).toBeVisible();
+    await canadaOption.click();
 
     await expect(currencyCode).toHaveText('CAD');
   }

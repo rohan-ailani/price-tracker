@@ -1,4 +1,3 @@
-
 import { test, expect } from '@playwright/test';
 import productData from '../data/products.json';
 import { savePriceHistory } from '../utils/price-history';
@@ -6,7 +5,7 @@ import { savePriceToGoogleSheets } from '../utils/google-sheets';
 import { extractPrice } from '../utils/price-extractor';
 
 const product = productData.products.find(
-  (item) => item.id === 'sonos-era-100-black'
+  (item) => item.id === 'sonos-era-100-black',
 );
 
 if (!product) {
@@ -14,7 +13,7 @@ if (!product) {
 }
 
 const enabledRetailers = product.retailers.filter(
-  (retailer) => retailer.enabled
+  (retailer) => retailer.enabled,
 );
 
 if (enabledRetailers.length === 0) {
@@ -43,7 +42,7 @@ for (const retailer of enabledRetailers) {
         .split('\n')
         .map((line) => line.trim())
         .filter((line) => /\$?\s?\d|price|sale/i.test(line))
-        .slice(0, 30)
+        .slice(0, 30),
     );
 
     const extractedPrice = await extractPrice(page);
@@ -55,16 +54,14 @@ for (const retailer of enabledRetailers) {
       extractedPrice === null ||
       extractedPrice.currency !== product.currency
     ) {
-      console.log(
-        'PRICE UNKNOWN: No valid price in the expected currency.'
-      );
+      console.log('PRICE UNKNOWN: No valid price in the expected currency.');
     } else if (extractedPrice.price <= product.targetPrice) {
       console.log(
-        `TARGET MET: ${extractedPrice.currency} ${extractedPrice.price} is at or below your target.`
+        `TARGET MET: ${extractedPrice.currency} ${extractedPrice.price} is at or below your target.`,
       );
     } else {
       console.log(
-        `TARGET NOT MET: ${extractedPrice.currency} ${(extractedPrice.price - product.targetPrice).toFixed(2)} above your target.`
+        `TARGET NOT MET: ${extractedPrice.currency} ${(extractedPrice.price - product.targetPrice).toFixed(2)} above your target.`,
       );
     }
 
@@ -92,7 +89,7 @@ for (const retailer of enabledRetailers) {
       } catch (error) {
         console.error(
           'Google Sheets save failed; local CSV history is preserved:',
-          error
+          error,
         );
       }
 
@@ -108,15 +105,11 @@ for (const retailer of enabledRetailers) {
       fullPage: false,
     });
 
-    expect(
-      response,
-      `${retailer.name} should return a response`
-    ).toBeTruthy();
+    expect(response, `${retailer.name} should return a response`).toBeTruthy();
 
-    expect(
-      response?.status(),
-      `${retailer.name} should return HTTP 200`
-    ).toBe(200);
+    expect(response?.status(), `${retailer.name} should return HTTP 200`).toBe(
+      200,
+    );
 
     expect(bodyText.length).toBeGreaterThan(0);
   });

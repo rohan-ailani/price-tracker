@@ -17,14 +17,14 @@ The tracker currently covers a turntable, a Sonos speaker, and a collection of v
 
 ## Technology Stack
 
-| Technology | Purpose |
-|---|---|
-| TypeScript | Application and test code |
-| Playwright | Browser automation and price checks |
-| Node.js and npm | Runtime and dependency management |
-| Google Sheets | Price history and dashboard |
+| Technology         | Purpose                                 |
+| ------------------ | --------------------------------------- |
+| TypeScript         | Application and test code               |
+| Playwright         | Browser automation and price checks     |
+| Node.js and npm    | Runtime and dependency management       |
+| Google Sheets      | Price history and dashboard             |
 | Google Apps Script | Receives and records price observations |
-| GitHub Actions | Scheduled and manual workflow execution |
+| GitHub Actions     | Scheduled and manual workflow execution |
 
 ## Project Structure
 
@@ -49,7 +49,7 @@ price-tracker/
 └── README.md
 ```
 
-*Note: The structure above highlights the main project files. Additional files may exist in the repository.*
+_Note: The structure above highlights the main project files. Additional files may exist in the repository._
 
 ## Prerequisites
 
@@ -85,10 +85,10 @@ On GitHub Actions, the workflow installs the required browser and operating-syst
 
 Configure the following secrets in your GitHub repository under **Settings → Secrets and variables → Actions**.
 
-| Secret | Purpose |
-|---|---|
-| `GOOGLE_SHEETS_WEB_APP_URL` | URL of the Google Apps Script web app |
-| `PRICE_TRACKER_SECRET` | Secret used to authorize requests to the web app |
+| Secret                      | Purpose                                          |
+| --------------------------- | ------------------------------------------------ |
+| `GOOGLE_SHEETS_WEB_APP_URL` | URL of the Google Apps Script web app            |
+| `PRICE_TRACKER_SECRET`      | Secret used to authorize requests to the web app |
 
 Do not commit secret values to the repository.
 

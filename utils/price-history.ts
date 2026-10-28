@@ -1,4 +1,3 @@
-
 import { appendFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 
@@ -23,7 +22,7 @@ function csvValue(value: string | number | boolean): string {
 }
 
 export async function savePriceHistory(
-  entry: PriceHistoryEntry
+  entry: PriceHistoryEntry,
 ): Promise<void> {
   await mkdir(historyDirectory, { recursive: true });
 

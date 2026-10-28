@@ -1,4 +1,3 @@
-
 import 'dotenv/config';
 
 export interface GoogleSheetPriceEntry {
@@ -23,22 +22,18 @@ const SHEET_NAMES: Record<ProductCategory, string> = {
 
 export async function savePriceToGoogleSheets(
   entry: GoogleSheetPriceEntry,
-  category: ProductCategory = 'turntable'
+  category: ProductCategory = 'turntable',
 ): Promise<void> {
   const url = process.env.GOOGLE_SHEETS_WEB_APP_URL;
 
   if (!url) {
-    throw new Error(
-      'GOOGLE_SHEETS_WEB_APP_URL is missing from .env'
-    );
+    throw new Error('GOOGLE_SHEETS_WEB_APP_URL is missing from .env');
   }
 
   const secret = process.env.PRICE_TRACKER_SECRET;
 
   if (!secret) {
-    throw new Error(
-      'PRICE_TRACKER_SECRET is missing from .env'
-    );
+    throw new Error('PRICE_TRACKER_SECRET is missing from .env');
   }
 
   const sheetName = SHEET_NAMES[category];
@@ -60,10 +55,7 @@ export async function savePriceToGoogleSheets(
 
   console.log('Google Sheets HTTP status:', response.status);
   console.log('Google Sheets response URL:', response.url);
-  console.log(
-    'Google Sheets response preview:',
-    responseText.slice(0, 300)
-  );
+  console.log('Google Sheets response preview:', responseText.slice(0, 300));
 
   let result: { success?: boolean; message?: string };
 
@@ -72,15 +64,13 @@ export async function savePriceToGoogleSheets(
   } catch {
     throw new Error(
       `Google Sheets returned non-JSON content. HTTP ${response.status}. ` +
-      `Response preview: ${responseText.slice(0, 200)}`
+        `Response preview: ${responseText.slice(0, 200)}`,
     );
   }
 
   if (!response.ok || result.success !== true) {
     throw new Error(
-      `Google Sheets save failed: ${
-        result.message ?? response.statusText
-      }`
+      `Google Sheets save failed: ${result.message ?? response.statusText}`,
     );
   }
 

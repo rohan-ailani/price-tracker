@@ -1,4 +1,3 @@
-
 import type { Page } from '@playwright/test';
 
 export interface ExtractedPrice {
@@ -10,14 +9,14 @@ export async function extractPrice(page: Page): Promise<ExtractedPrice | null> {
   return page.evaluate(() => {
     const amountMeta = document.querySelector<HTMLMetaElement>(
       'meta[property="og:price:amount"], ' +
-      'meta[property="product:price:amount"], ' +
-      'meta[itemprop="price"]'
+        'meta[property="product:price:amount"], ' +
+        'meta[itemprop="price"]',
     );
 
     const currencyMeta = document.querySelector<HTMLMetaElement>(
       'meta[property="og:price:currency"], ' +
-      'meta[property="product:price:currency"], ' +
-      'meta[itemprop="priceCurrency"]'
+        'meta[property="product:price:currency"], ' +
+        'meta[itemprop="priceCurrency"]',
     );
 
     if (amountMeta?.content) {
@@ -60,7 +59,7 @@ export async function extractPrice(page: Page): Promise<ExtractedPrice | null> {
     }
 
     const scripts = document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     for (const script of scripts) {
