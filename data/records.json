@@ -22,7 +22,7 @@
         {
           "name": "Essency Records",
           "url": "https://essencyrecords.com/products/adele-30-180g-black-2lp",
-          "enabled": true
+          "enabled": false
         }
       ]
     },
@@ -111,8 +111,8 @@
       "currency": "CAD",
       "retailers": [
         {
-          "name": "Warner Music Canada",
-          "url": "https://wmc.shop/products/moon-music-ecorecord-clear",
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/coldplay-moon-music-red-eco-vinyl-new-vinyl?variant=50343862108391&_pos=6&_sid=bda1e6680&_ss=r",
           "enabled": true
         }
       ]
@@ -124,8 +124,8 @@
       "currency": "CAD",
       "retailers": [
         {
-          "name": "Resolute Records",
-          "url": "https://resoluterecords.ca/products/coldplay-viva-la-vida-or-death-and-all-his-friends-new-vinyl",
+          "name": "Sonic Boom Music",
+          "url": "https://www.sonicboommusic.com/products/coldplay-viva-la-vida-or-death-and-all-clear-ecorecord-new-vinyl?variant=51182919581927&_pos=3&_sid=bda1e6680&_ss=r",
           "enabled": true
         }
       ]
