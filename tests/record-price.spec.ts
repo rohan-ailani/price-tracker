@@ -1,8 +1,27 @@
-
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 import recordsData from '../data/records.json';
 import { savePriceHistory } from '../utils/price-history';
 import { savePriceToGoogleSheets } from '../utils/google-sheets';
+
+async function ensureCadCurrency(page: Page) {
+  const currencyCode = page.locator(
+    '[data-testid="localization-currency-code"]',
+  );
+
+  const currentCurrency = (await currencyCode.textContent())?.trim();
+
+  if (currentCurrency !== 'CAD') {
+    await page
+      .locator('button[aria-controls="dropdown-localization-results"]')
+      .click();
+
+    await page
+      .locator('#dropdown-localization-results [data-value="CA"]')
+      .click();
+
+    await expect(currencyCode).toHaveText('CAD');
+  }
+}
 
 test.describe('Record Price Tracker', () => {
   for (const product of recordsData.products) {
@@ -10,7 +29,9 @@ test.describe('Record Price Tracker', () => {
       test(`${product.name} - ${retailer.name}`, async ({ page }) => {
         console.log(`\nProduct: ${product.name}`);
         console.log(`Retailer: ${retailer.name}`);
-        console.log(`Target price: ${product.currency} $${product.targetPrice}`);
+        console.log(
+          `Target price: ${product.currency} $${product.targetPrice}`,
+        );
         console.log(`URL: ${retailer.url}`);
 
         const response = await page.goto(retailer.url, {
@@ -24,6 +45,10 @@ test.describe('Record Price Tracker', () => {
 
         const pageTitle = await page.title();
         console.log('Page title:', pageTitle);
+
+        if (retailer.name === 'Sonic Boom Music') {
+          await ensureCadCurrency(page);
+        }
 
         const priceData = await page.evaluate(() => {
           const metaPrice =
@@ -43,7 +68,7 @@ test.describe('Record Price Tracker', () => {
               ?.getAttribute('content');
 
           const jsonLdScripts = Array.from(
-            document.querySelectorAll('script[type="application/ld+json"]')
+            document.querySelectorAll('script[type="application/ld+json"]'),
           );
 
           let structuredPrice: string | number | undefined;
@@ -95,7 +120,7 @@ test.describe('Record Price Tracker', () => {
 
         if (response?.status() !== 200) {
           throw new Error(
-            `Retailer page returned HTTP ${response?.status() ?? 'no response'}`
+            `Retailer page returned HTTP ${response?.status() ?? 'no response'}`,
           );
         }
 
@@ -103,26 +128,26 @@ test.describe('Record Price Tracker', () => {
 
         expect(
           priceData.price,
-          `No structured price found for ${product.name} at ${retailer.name}`
+          `No structured price found for ${product.name} at ${retailer.name}`,
         ).not.toBeNull();
 
         expect(
           priceData.price,
-          `No structured price found for ${product.name} at ${retailer.name}`
+          `No structured price found for ${product.name} at ${retailer.name}`,
         ).not.toBeUndefined();
 
         const price = Number(priceData.price);
 
         expect(
           Number.isFinite(price) && price > 0,
-          `Invalid price extracted for ${product.name}: ${priceData.price}`
+          `Invalid price extracted for ${product.name}: ${priceData.price}`,
         ).toBe(true);
 
         const currency = String(priceData.currency ?? '').toUpperCase();
 
         expect(
           currency,
-          `Unexpected currency for ${product.name}: expected ${product.currency}, received ${currency || 'unknown'}`
+          `Unexpected currency for ${product.name}: expected ${product.currency}, received ${currency || 'unknown'}`,
         ).toBe(product.currency);
 
         const targetMet = price <= product.targetPrice;
@@ -133,7 +158,7 @@ test.describe('Record Price Tracker', () => {
             ? 'TARGET MET!'
             : `Target not met. Difference: $${(
                 price - product.targetPrice
-              ).toFixed(2)}`
+              ).toFixed(2)}`,
         );
 
         const entry = {
