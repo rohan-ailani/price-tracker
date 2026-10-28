@@ -1,30 +1,29 @@
 # Price Tracker
 
-A TypeScript and Playwright project that monitors product prices across Canadian retailers, records price history, and tracks prices against personal target prices using Google Sheets.
+[![Daily Price Tracker](https://github.com/rohan-ailani/price-tracker/actions/workflows/price-tracker.yml/badge.svg?branch=main)](https://github.com/rohan-ailani/price-tracker/actions/workflows/price-tracker.yml)
 
-The tracker currently covers a turntable, a Sonos speaker, and a collection of vinyl records. GitHub Actions runs the checks automatically, with support for manual workflow runs.
+A TypeScript-based price tracker built with Playwright to monitor product prices across Canadian retailers. The project collects pricing information, records price history locally and in Google Sheets, and runs automatically through GitHub Actions.
 
 ## Features
 
-- **Automated price tracking:** Checks configured products across supported retailers.
+- **Automated price checks:** Uses Playwright to visit retailer product pages and extract pricing information.
 - **Multiple product categories:** Tracks turntables, speakers, and vinyl records.
-- **Multi-retailer comparison:** Identifies the lowest recorded price for each product.
-- **Target price monitoring:** Compares current prices against configured target prices.
-- **Price history:** Records price observations, retailer details, product URLs, and target-price status.
-- **Google Sheets integration:** Stores price history and displays a dashboard.
-- **Scheduled execution:** Runs through GitHub Actions, with manual execution available from the Actions tab.
-- **Playwright WebKit:** Uses WebKit to run the browser-based price checks.
+- **Retailer comparison:** Collects prices from supported retailer websites.
+- **Currency validation:** Checks that prices are reported in the expected currency, with Canadian dollar support for configured retailers.
+- **Price history:** Saves historical pricing data locally and to Google Sheets.
+- **Scheduled execution:** Runs automatically through GitHub Actions.
+- **Configurable products:** Allows products to be added, updated, or temporarily disabled through JSON configuration files.
+- **Failure diagnostics:** Uses Playwright screenshots and traces to help investigate failed tests.
 
-## Technology Stack
+## Tech Stack
 
-| Technology         | Purpose                                 |
-| ------------------ | --------------------------------------- |
-| TypeScript         | Application and test code               |
-| Playwright         | Browser automation and price checks     |
-| Node.js and npm    | Runtime and dependency management       |
-| Google Sheets      | Price history and dashboard             |
-| Google Apps Script | Receives and records price observations |
-| GitHub Actions     | Scheduled and manual workflow execution |
+- TypeScript
+- Playwright
+- Node.js
+- Google Sheets
+- Google Apps Script
+- GitHub Actions
+- Git and GitHub
 
 ## Project Structure
 
@@ -40,154 +39,219 @@ price-tracker/
 │   ├── record-price.spec.ts
 │   ├── speaker-price.spec.ts
 │   └── turntable-price.spec.ts
-├── utils/
-│   ├── google-sheets.ts
-│   └── price-history.ts
 ├── playwright.config.ts
 ├── package.json
 ├── package-lock.json
 └── README.md
 ```
 
-_Note: The structure above highlights the main project files. Additional files may exist in the repository._
+## How It Works
 
-## Prerequisites
-
-- Node.js 22
-- npm
-- A Google Sheets spreadsheet configured to receive price observations
-- A Google Apps Script web app for recording price history
+1. Product information and retailer URLs are maintained in JSON configuration files.
+2. Playwright opens the configured product pages using the selected browser.
+3. The tests extract available pricing information and relevant currency metadata.
+4. The tracker validates the extracted data against the product configuration.
+5. Price history is saved locally and submitted to Google Sheets when the integration is configured.
+6. GitHub Actions runs the tracker on a schedule and stores test artifacts for troubleshooting.
 
 ## Getting Started
 
-### 1. Clone the repository
+### Prerequisites
+
+Install the following before running the project:
+
+- [Node.js](https://nodejs.org/) (Node.js 22 is used in the GitHub Actions workflow)
+- npm
+- A GitHub account
+- A Google account if using the Google Sheets integration
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/rohan-ailani/price-tracker.git
 cd price-tracker
 ```
 
-### 2. Install dependencies
+### 2. Install Dependencies
 
 ```bash
 npm ci
 ```
 
-### 3. Install the WebKit browser
+### 3. Install Playwright Browsers
+
+To install the browsers used by the project:
 
 ```bash
-npx playwright install webkit
+npx playwright install
 ```
 
-On GitHub Actions, the workflow installs the required browser and operating-system dependencies automatically.
+On Linux, you may also need to install operating-system dependencies:
 
-### 4. Configure environment variables
+```bash
+npx playwright install --with-deps
+```
 
-Configure the following secrets in your GitHub repository under **Settings → Secrets and variables → Actions**.
+### 4. Configure Environment Variables
 
-| Secret                      | Purpose                                          |
-| --------------------------- | ------------------------------------------------ |
-| `GOOGLE_SHEETS_WEB_APP_URL` | URL of the Google Apps Script web app            |
-| `PRICE_TRACKER_SECRET`      | Secret used to authorize requests to the web app |
+Create a `.env` file in the project root:
 
-Do not commit secret values to the repository.
+```env
+GOOGLE_SHEETS_WEB_APP_URL=your_google_apps_script_web_app_url
+PRICE_TRACKER_SECRET=your_shared_secret
+```
 
-## Running the Tracker
+Replace the placeholder values with your actual configuration.
 
-Run the complete WebKit test suite locally:
+Keep `.env` out of version control. Do not commit secrets, access tokens, or private deployment URLs to a public repository.
+
+The Google Sheets integration requires the corresponding Google Apps Script deployment to be configured to accept requests from the tracker.
+
+## Running the Tests
+
+### Run All Tests
+
+```bash
+npx playwright test
+```
+
+### Run Tests in WebKit
+
+WebKit is the browser used by the scheduled GitHub Actions workflow.
 
 ```bash
 npx playwright test --project=webkit
 ```
 
-To use a more readable, line-by-line test reporter:
+### Run an Individual Test Suite
+
+Track vinyl record prices:
 
 ```bash
-npx playwright test --project=webkit --reporter=line
+npx playwright test tests/record-price.spec.ts
 ```
 
-Run an individual product category:
+Track speaker prices:
 
 ```bash
-# Turntable
-npx playwright test tests/turntable-price.spec.ts --project=webkit
-
-# Speakers
-npx playwright test tests/speaker-price.spec.ts --project=webkit
-
-# Vinyl records
-npx playwright test tests/record-price.spec.ts --project=webkit
+npx playwright test tests/speaker-price.spec.ts
 ```
 
-## GitHub Actions
+Track turntable prices:
 
-The workflow is located at `.github/workflows/price-tracker.yml`.
+```bash
+npx playwright test tests/turntable-price.spec.ts
+```
 
-It supports:
+### View the HTML Report
 
-- **Scheduled runs:** Automatically checks prices at the configured times.
-- **Manual runs:** Can be triggered from the repository's Actions tab using the workflow dispatch option.
-- **Automated execution:** Checks out the repository, installs Node.js dependencies, installs Playwright browsers, and runs the WebKit tests.
+After a test run, open the Playwright HTML report:
 
-The schedule is configured in the workflow file. Its timezone is `America/Toronto`, with checks configured for 9:55 AM and 5:55 PM local time.
+```bash
+npx playwright show-report
+```
 
-To inspect a run, open the repository's **Actions** tab and select **Daily Price Tracker**. Expand a failed step to review its logs.
+## Product Configuration
+
+Products are configured in the JSON files under `data/`.
+
+- `data/products.json`: Product configuration for the applicable tracked products, including turntables and speakers.
+- `data/records.json`: Vinyl record configuration.
+
+The configuration files determine which products are tracked and which retailer product pages are checked. Product entries can be enabled or disabled to control whether they are included in a run.
+
+When adding a product, ensure its configuration includes the fields expected by the relevant test suite, such as the product name, retailer, product URL, expected currency, and target price where applicable. Follow the structure of existing entries.
 
 ## Google Sheets Integration
 
-The tracker records price observations in separate history tabs:
+The tracker can submit price data to Google Sheets through a Google Apps Script web app.
 
-- **Turntable Price History**
-- **Speaker Price History**
-- **Record Price History**
+The spreadsheet is used to maintain historical pricing information across product categories, with separate tabs for:
 
-The **Price Dashboard** summarizes the latest tracked information, including:
+- Turntable Price History
+- Speaker Price History
+- Record Price History
 
-- Product name
-- Target price
-- Lowest recorded price
-- Cheapest retailer
-- Difference between the lowest price and target price
-- Whether the target price has been met
-- Last checked time
-- Link to the retailer's product page
+The integration uses the following environment variables:
 
-Historical observations allow prices to be compared over time rather than relying on a single check.
+- `GOOGLE_SHEETS_WEB_APP_URL`
+- `PRICE_TRACKER_SECRET`
 
-## Configuring Products
+These values must be configured in the local `.env` file for local runs and as GitHub repository secrets for scheduled runs.
 
-Product information and target prices are maintained in the JSON configuration files under `data/`.
+## GitHub Actions
 
-- `data/products.json` contains turntable and speaker product configurations.
-- `data/records.json` contains vinyl record configurations.
+The project uses GitHub Actions to run the price tracker automatically.
 
-Each product has a configured target price and retailer information used by the tracker.
+The workflow is located at:
 
-To change a target price, update the relevant product entry in the appropriate JSON file, commit the change, and push it to the default branch. The next successful run should record the configured target price with the new observation.
+```text
+.github/workflows/price-tracker.yml
+```
 
-Keep the JSON structure consistent with the existing entries when adding or modifying products.
+The workflow is configured to:
+
+1. Check out the repository.
+2. Set up Node.js.
+3. Install npm dependencies.
+4. Install Playwright browsers and required system dependencies.
+5. Run the WebKit price-tracking tests.
+6. Upload available test results and reports as workflow artifacts.
+
+The workflow is scheduled to run twice daily using the `America/Toronto` time zone. It can also be started manually from the **Actions** tab in GitHub.
+
+### Workflow Status
+
+The badge at the top of this README displays the status of the `Daily Price Tracker` workflow on the `main` branch.
+
+- **Passing:** The latest applicable workflow run succeeded.
+- **Failing:** The latest applicable workflow run failed.
+- **No status displayed:** The workflow may not have run yet, or the badge URL or workflow name may need to be checked.
 
 ## Troubleshooting
 
-### Tests pass locally but fail in GitHub Actions
+### Missing Google Sheets Environment Variables
 
-Retailer websites may behave differently when accessed from GitHub-hosted runners. Possible causes include request blocking, page-loading delays, and browser differences.
+If the tracker reports that `GOOGLE_SHEETS_WEB_APP_URL` or `PRICE_TRACKER_SECRET` is missing:
 
-Check the failed test's log before changing selectors or increasing timeouts. A failure affecting many retailers may indicate a shared environment or network issue.
+- Confirm that both variables exist in your local `.env` file.
+- Confirm that the variable names match exactly.
+- For GitHub Actions, confirm that both values are configured under repository **Settings → Secrets and variables → Actions**.
+- Confirm that the workflow passes the secrets into the test-running step.
 
-### Google Sheets is not updated
+### Price or Currency Validation Failures
 
-Verify that:
+Retailer pages may display prices in different currencies depending on their localization settings.
 
-- `GOOGLE_SHEETS_WEB_APP_URL` is configured correctly.
-- `PRICE_TRACKER_SECRET` matches the expected secret.
-- The Google Apps Script web app is deployed and accessible.
-- The workflow logs do not contain authorization or request errors.
+If a test fails:
 
-### A product price is missing
+- Check the retailer page and confirm the displayed currency.
+- Verify the expected currency in the product configuration.
+- Confirm that the test extracts the correct price and currency metadata.
+- Check whether the retailer's page structure or localization controls have changed.
 
-Check the retailer page, the price-extraction logic, and the relevant product configuration. Retailer page changes can cause an existing extraction method to stop finding the price.
+### Failed Playwright Tests
 
-## Notes
+For local debugging, run the affected suite independently:
 
-This project is intended for personal price monitoring. Price availability and accuracy depend on retailer websites and the price-extraction methods supported by the tracker.
+```bash
+npx playwright test tests/record-price.spec.ts --project=webkit
+```
+
+Replace the test filename with the relevant suite as needed.
+
+Review the terminal output, Playwright report, screenshots, and traces where available.
+
+## Future Improvements
+
+Potential enhancements include:
+
+- Adding more retailers and products.
+- Improving resilience to retailer page changes.
+- Adding price-drop notifications.
+- Tracking lowest recorded prices and price trends.
+- Improving reporting and historical price comparisons.
+
+## Disclaimer
+
+This project is intended for personal price tracking and automation practice. Retailer websites can change their layouts, pricing, availability, and localization behavior at any time. Collected prices may not reflect final checkout prices, shipping costs, taxes, or product availability.
