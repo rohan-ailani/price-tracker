@@ -33,7 +33,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run price tracker
-        run: npx playwright test --project=webkit
+        run: npx playwright test --project=webkit --reporter=line
         env:
           GOOGLE_SHEETS_WEB_APP_URL: ${{ secrets.GOOGLE_SHEETS_WEB_APP_URL }}
           PRICE_TRACKER_SECRET: ${{ secrets.PRICE_TRACKER_SECRET }}
