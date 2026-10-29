@@ -3,7 +3,7 @@
     {
       "id": "adele-25",
       "name": "Adele - 25",
-      "targetPrice": 45,
+      "targetPrice": 30,
       "currency": "CAD",
       "retailers": [
         {
@@ -16,7 +16,7 @@
     {
       "id": "adele-30",
       "name": "Adele - 30",
-      "targetPrice": 45,
+      "targetPrice": 30,
       "currency": "CAD",
       "retailers": [
         {
@@ -29,7 +29,7 @@
     {
       "id": "alanis-morissette-jagged-little-pill",
       "name": "Alanis Morissette - Jagged Little Pill",
-      "targetPrice": 45,
+      "targetPrice": 35,
       "currency": "CAD",
       "retailers": [
         {
@@ -42,7 +42,7 @@
     {
       "id": "andrea-bocelli-a-family-christmas",
       "name": "Andrea Bocelli - A Family Christmas",
-      "targetPrice": 45,
+      "targetPrice": 30,
       "currency": "CAD",
       "retailers": [
         {
@@ -55,7 +55,7 @@
     {
       "id": "bob-marley-legend",
       "name": "Bob Marley & The Wailers - Legend",
-      "targetPrice": 45,
+      "targetPrice": 30,
       "currency": "CAD",
       "retailers": [
         {
@@ -68,7 +68,7 @@
     {
       "id": "buena-vista-social-club",
       "name": "Buena Vista Social Club - Buena Vista Social Club",
-      "targetPrice": 45,
+      "targetPrice": 35,
       "currency": "CAD",
       "retailers": [
         {
@@ -94,7 +94,7 @@
     {
       "id": "coldplay-a-head-full-of-dreams",
       "name": "Coldplay - A Head Full of Dreams",
-      "targetPrice": 45,
+      "targetPrice": 35,
       "currency": "CAD",
       "retailers": [
         {
@@ -107,7 +107,7 @@
     {
       "id": "coldplay-moon-music",
       "name": "Coldplay - Moon Music",
-      "targetPrice": 45,
+      "targetPrice": 35,
       "currency": "CAD",
       "retailers": [
         {
@@ -120,7 +120,7 @@
     {
       "id": "coldplay-viva-la-vida",
       "name": "Coldplay - Viva la Vida or Death and All His Friends",
-      "targetPrice": 45,
+      "targetPrice": 35,
       "currency": "CAD",
       "retailers": [
         {
@@ -133,7 +133,7 @@
     {
       "id": "daft-punk-random-access-memories",
       "name": "Daft Punk - Random Access Memories",
-      "targetPrice": 45,
+      "targetPrice": 40,
       "currency": "CAD",
       "retailers": [
         {
@@ -146,7 +146,7 @@
     {
       "id": "disney-beauty-and-the-beast",
       "name": "Disney - Beauty and the Beast",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
@@ -159,7 +159,7 @@
     {
       "id": "drake-if-youre-reading-this-its-too-late",
       "name": "Drake - If You're Reading This It's Too Late",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
@@ -172,7 +172,7 @@
     {
       "id": "drake-take-care",
       "name": "Drake - Take Care",
-      "targetPrice": 45,
+      "targetPrice": 40,
       "currency": "CAD",
       "retailers": [
         {
@@ -185,7 +185,7 @@
     {
       "id": "drake-views",
       "name": "Drake - Views",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
@@ -198,7 +198,7 @@
     {
       "id": "florence-and-the-machine-symphony-of-lungs",
       "name": "Florence + The Machine - Symphony of Lungs",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
@@ -211,7 +211,7 @@
     {
       "id": "frank-sinatra-ultimate-sinatra",
       "name": "Frank Sinatra - Ultimate Sinatra",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
@@ -224,7 +224,7 @@
     {
       "id": "jay-z-the-blueprint-three",
       "name": "JAY-Z - The Blueprint 3",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
@@ -237,7 +237,7 @@
     {
       "id": "jeff-buckley-grace",
       "name": "Jeff Buckley - Grace",
-      "targetPrice": 45,
+      "targetPrice": 35,
       "currency": "CAD",
       "retailers": [
         {
@@ -250,7 +250,7 @@
     {
       "id": "justin-bieber-justice",
       "name": "Justin Bieber - Justice",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
@@ -263,7 +263,7 @@
     {
       "id": "kendrick-lamar-good-kid-maad-city",
       "name": "Kendrick Lamar - good kid, m.A.A.d city",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
@@ -289,7 +289,7 @@
     {
       "id": "marvin-gaye-whats-going-on",
       "name": "Marvin Gaye - What's Going On",
-      "targetPrice": 45,
+      "targetPrice": 40,
       "currency": "CAD",
       "retailers": [
         {
@@ -315,7 +315,7 @@
     {
       "id": "noah-kahan-live-from-fenway-park",
       "name": "Noah Kahan - Live From Fenway Park",
-      "targetPrice": 45,
+      "targetPrice": 65,
       "currency": "CAD",
       "retailers": [
         {
@@ -328,7 +328,7 @@
     {
       "id": "noah-kahan-the-great-divide",
       "name": "Noah Kahan - The Great Divide",
-      "targetPrice": 45,
+      "targetPrice": 55,
       "currency": "CAD",
       "retailers": [
         {
@@ -341,7 +341,7 @@
     {
       "id": "post-malone-stoney",
       "name": "Post Malone - Stoney",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
@@ -367,7 +367,7 @@
     {
       "id": "taylor-swift-evermore",
       "name": "Taylor Swift - evermore",
-      "targetPrice": 45,
+      "targetPrice": 35,
       "currency": "CAD",
       "retailers": [
         {
@@ -393,7 +393,7 @@
     {
       "id": "taylor-swift-midnights",
       "name": "Taylor Swift - Midnights",
-      "targetPrice": 45,
+      "targetPrice": 35,
       "currency": "CAD",
       "retailers": [
         {
@@ -406,7 +406,7 @@
     {
       "id": "taylor-swift-red-taylors-version",
       "name": "Taylor Swift - Red (Taylor's Version)",
-      "targetPrice": 45,
+      "targetPrice": 55,
       "currency": "CAD",
       "retailers": [
         {
@@ -419,7 +419,7 @@
     {
       "id": "the-1975-being-funny-in-a-foreign-language",
       "name": "The 1975 - Being Funny in a Foreign Language",
-      "targetPrice": 45,
+      "targetPrice": 35,
       "currency": "CAD",
       "retailers": [
         {
@@ -432,7 +432,7 @@
     {
       "id": "the-1975-i-like-it-when-you-sleep",
       "name": "The 1975 - I Like It When You Sleep, for You Are So Beautiful Yet So Unaware of It",
-      "targetPrice": 45,
+      "targetPrice": 75,
       "currency": "CAD",
       "retailers": [
         {
@@ -445,7 +445,7 @@
     {
       "id": "the-beatles-abbey-road",
       "name": "The Beatles - Abbey Road",
-      "targetPrice": 45,
+      "targetPrice": 30,
       "currency": "CAD",
       "retailers": [
         {
@@ -458,7 +458,7 @@
     {
       "id": "the-killers-hot-fuss",
       "name": "The Killers - Hot Fuss",
-      "targetPrice": 45,
+      "targetPrice": 30,
       "currency": "CAD",
       "retailers": [
         {
@@ -471,7 +471,7 @@
     {
       "id": "various-the-sound-of-music",
       "name": "Various - The Sound of Music",
-      "targetPrice": 45,
+      "targetPrice": 75,
       "currency": "CAD",
       "retailers": [
         {
@@ -484,7 +484,7 @@
     {
       "id": "various-wicked-15th-anniversary-special-edition",
       "name": "Various - Wicked (15th Anniversary Special Edition)",
-      "targetPrice": 45,
+      "targetPrice": 50,
       "currency": "CAD",
       "retailers": [
         {
