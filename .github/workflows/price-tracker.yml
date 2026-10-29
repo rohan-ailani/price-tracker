@@ -32,10 +32,35 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run price tracker
+        id: playwright
+        continue-on-error: true
         env:
           GOOGLE_SHEETS_WEB_APP_URL: ${{ secrets.GOOGLE_SHEETS_WEB_APP_URL }}
           PRICE_TRACKER_SECRET: ${{ secrets.PRICE_TRACKER_SECRET }}
-        run: npx playwright test --project=webkit --reporter=line
+        run: npx playwright test --project=webkit --reporter=line,html
+
+      - name: Record Playwright result
+        if: always()
+        env:
+          TEST_OUTCOME: ${{ steps.playwright.outcome }}
+        run: |
+          echo "## Price Tracker Run Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$TEST_OUTCOME" = "success" ]; then
+            echo "### ✅ Playwright tests passed" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### ❌ Playwright tests failed" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Test outcome:** $TEST_OUTCOME" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Browser:** WebKit" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Test report:** See the uploaded Playwright artifacts below." >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$TEST_OUTCOME" != "success" ]; then
+            exit 1
+          fi
 
       - name: Upload Playwright test results
         if: always()
