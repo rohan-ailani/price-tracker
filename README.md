@@ -1,6 +1,9 @@
-# Price Tracker
+## Live Price Tracker Dashboard
 
-[![Daily Price Tracker](https://github.com/rohan-ailani/price-tracker/actions/workflows/price-tracker.yml/badge.svg?branch=main)](https://github.com/rohan-ailani/price-tracker/actions/workflows/price-tracker.yml)
+View the live Google Sheets dashboard to see the latest prices, 
+cheapest retailers, target prices, and historical price tracking.
+
+📊 **[Open Price Tracker Dashboard](https://docs.google.com/spreadsheets/d/1eW5jje0RNJyBb9XYAtpxmoC3ppOva75kEgCYYou5sDg/edit?usp=sharing)**
 
 A TypeScript-based price tracker built with Playwright to monitor product prices across Canadian retailers. The project collects pricing information, records price history locally and in Google Sheets, and runs automatically through GitHub Actions.
 
