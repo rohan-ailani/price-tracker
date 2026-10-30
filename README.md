@@ -2,7 +2,7 @@
 
 ## Live Price Tracker Dashboard
 
-[![Daily Price Tracker](https://github.com/rohan-ailani/price-tracker/actions/workflows/price-tracker.yml/badge.svg?branch=main)](https://github.com/rohan-ailani/price-tracker/actions/workflows/price-tracker.yml)
+[![Daily Price Tracker](https://github.com/rohan-ailani/price-tracker/actions/workflows/price-tracker.yml/badge.svg)](https://github.com/rohan-ailani/price-tracker/actions/workflows/price-tracker.yml)
 
 View the live Google Sheets dashboard to see the latest prices, cheapest retailers, target prices, and historical price tracking.
 
