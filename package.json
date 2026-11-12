@@ -5,7 +5,8 @@
   "scripts": {
     "test": "playwright test",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "report:trends": "tsx scripts/generate-trend-report.ts"
   },
   "keywords": [],
   "author": "",
